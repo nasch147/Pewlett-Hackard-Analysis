@@ -5,7 +5,7 @@ Our analysis consisted of reviewing several datasets from Pewlett Hackard Corp c
 
 The data was originally given in six coma seperated value (CSV) files consisting of employee information such as hire date, birth date, name, employee number, current position, and salary.  the files also contained organizational data such as department numbers, department names, and titles. These fix files were added into six tables within a SQL database using PG Admin, a PostgreSQL tool. See the figure below for a diagram of the tables, the variables they contain, and the relationships between the tables.  Emp_no was used as a primary key for four of the tables while dept_no was used as the key value for the two orginizational tables. 
 
-
+ ![BDB](Resources/QuickDBD-exports.png)
 
 Once the data from the CSV files were imported into SQL tables, we then created a new table for our first list. This table used employee number, first name, and last name from one table and title and dates indicating when the position was held from another table. It was therefore neccessary to join the two tables to get the desired columns using an inner join where employee number was the primary key. The data was then filtered by using a range of birth dates for employees of eligible retirement age and for positions that are currently held by each employee. It was neccessary to filter by current postiion as many employees have held several positions at the Company during their employment. The data was finally sorted in ascending order on employee number. A second table was generated counting the number of employees for each title at the Company.  Images of the newly generated tables can be seen below. 
 
